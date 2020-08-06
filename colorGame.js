@@ -10,11 +10,13 @@ var easybtn = document.querySelector("#easybtn");
 var hardbtn = document.querySelector("#hardbtn");
 
 easybtn.addEventListener("click", function(){
+    numberofSquares = 3;
     hardbtn.classList.remove("selected");
     easybtn.classList.add("selected");
     colors = generateRandomColors(numberofSquares);
     pickedColor =  pickColor();
     colorDisplay.textContent = pickedColor;
+    
     for(var i = 0; i < squares.length; i++){
         if(colors[i]){
             squares[i].style.backgroundColor = colors[i];
@@ -45,7 +47,7 @@ resetButton.addEventListener("click", function(){
     for(var i = 0; i < squares.length; i++){
         squares[i].style.backgroundColor = colors[i];
     }
-    h1.style.background = "#232323";
+    h1.style.background = "steelblue";
     
 
 })
